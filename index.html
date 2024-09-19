@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optima Chemicals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #004953;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        header img {
+            width: 150px;
+        }
+
+        .menu {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .menu li:hover > .dropdown {
+            display: flex;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: black;
+            flex-direction: column;
+            top: 100%;
+            left: 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            z-index: 1000;
+        }
+
+        .dropdown a {
+            padding: 5px 10px;
+            white-space: nowrap;
+        }
+
+        .HeaderPic {
+            background-image: url('images/pro2.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            text-align: center;
+        }
+
+        .HeaderPic h1 {
+            font-size: 3em;
+        }
+
+        #AboutPicWrapper {
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+
+        #AboutPic {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        #ProductsSection {
+            padding: 40px;
+        }
+
+        #ProductsWrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .Product {
+            width: 23%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .Product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .Product h5 {
+            margin-top: 10px;
+        }
+
+        /* About Section */
+        #AboutPicWrapper {
+            padding: 40px;
+            background-color: #004953;
+        }
+
+        #AboutPic {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            color: white;
+        }
+
+        /* Boxes Section */
+        #BoxesSection {
+            background-image: url('images/7.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 40px;
+            color: white;
+            text-align: left;
+        }
+
+        .Box {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .SeparatorLine {
+            border-bottom: 2px solid #ccc;
+            margin: 40px 0;
+        }
+
+        footer {
+            background-color: #004040;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .Button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .Button i {
+            margin-left: 10px;
+        }
+
+        /* General Styles for mobile */
+        @media only screen and (max-width: 768px) {
+
+            /* Adjust header */
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Adjust header logo */
+            header img {
+                width: 120px;
+                margin-bottom: 10px;
+            }
+
+            /* Adjust header navigation for mobile */
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu li {
+                margin-bottom: 10px;
+            }
+
+            /* Header Picture - ensure it scales well */
+            .HeaderPic {
+                height: 250px;
+            }
+
+            .HeaderPic h1 {
+                font-size: 2em;
+            }
+
+            /* About Section */
+            #AboutPicWrapper {
+                padding: 20px;
+            }
+
+            #AboutPic {
+                font-size: 14px;
+            }
+
+            /* Products Section */
+            #ProductsWrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .Product {
+                width: 100%; /* Make each product take up full width */
+                margin-bottom: 15px;
+            }
+
+            /* Boxes Section */
+            #BoxesSection {
+                padding: 20px;
+            }
+
+            .Box {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            /* Footer adjustments */
+            footer {
+                font-size: 14px;
+            }
+        }
+
+        /* Further refinement for very small screens (like small phones) */
+        @media only screen and (max-width: 480px) {
+
+            /* Reduce padding and font sizes */
+            body {
+                font-size: 14px;
+            }
+
+            header img {
+                width: 100px;
+            }
+
+            .HeaderPic h1 {
+                font-size: 1.5em;
+            }
+
+            #ProductsWrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .Product {
+                width: 100%; /* Make products take up full width on small screens */
+                padding: 10px;
+            }
+
+            .Box {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <img src="images/log1.png" alt="Company Logo">
+        <div class="header-info">
+            <h1 style="font-weight: bold; color: white;">Optima Chemicals</h1>
+            <p style="font-style: italic; color: white;">chemicals that fuel industry success</p>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-company.html">Our Company</a></li>
+            <li>
+                <a href="#">Products <i class="fas fa-bars"></i></a>
+                <div class="dropdown">
+                    <a href="cementing-chemicals.html">Cementing Chemicals</a>
+                    <a href="production-chemicals.html">Production Chemicals</a>
+                    <a href="drilling-fluid-additives.html">Drilling Fluid Additives</a>
+                    <a href="stimulation-chemicals.html">Stimulation Chemicals</a>
+                </div>
+            </li>
+            <li><a href="our-team.html">Our Team</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Header Pic -->
+    <div class="HeaderPic">
+        <h1 class="APS"><span class="Large"></span><br /></h1>
+    </div>
+    <div class="SeparatorLine">&nbsp;</div>
+
+    <!-- About Section -->
+    <div id="AboutPicWrapper"> 
+        <div id="AboutPic"> 
+            <h2>About Optima Chemicals</h2>
+            <p>Optima Chemicals is a performance-driven leader in specialty chemical solutions, dedicated to maximizing efficiency and delivering exceptional value through locally manufactured and custom-formulated products that give our clients a competitive edge.</p>
+            <p>Headquartered in Abu Dhabi, UAE, Optima Chemicals specializes in the manufacturing and supply of advanced chemical additives for drilling, cementing, stimulation, and production.</p>
+            <p>With over 40 years of expertise, we have built a strong reputation in the oilfield industry, known for our high-quality products, reliable services, and a commitment to excellence in customer care.</p>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div class="SeparatorLine">&nbsp;</div>
+    <div id="ProductsSection" style="background-color: #004953; padding: 40px;">
+        <h2 class="Small" style="color: white;">Products &amp; Solutions</h2>
+        <hr style="border-color: white;" />
+        <div id="ProductsWrapper">
+            <div class="Product">
+                <a href="cementing-chemicals.html"><img src="images/cem3.jpg" alt="Well Cementing Chemicals" /></a>
+                <div class="ProductInfo">
+                    <h5 class="APS"><a href="cementing-chemicals.html" style="color: #333;">Cementing Chemicals</a></h5>
+                 <p>Optima Chemicals has developed a growing line of fluid loss, dispersants, retarders, spacers and extenders for your oilfield cementing needs.</p>
+                </div>
+            </div>
+            <div class="Product">
+                <a href="production-chemicals.html"><img src="images/pro2.jpg" alt="Production Chemicals" /></a>
+                <div class="ProductInfo">
+                    <h5 class="APS"><a href="production-chemicals.html" style="color: #333;">Production Chemicals</a></h5>
+                    <p>High quality, cost effective products to help companies meet their technical challenges in production, reducing cost of operation and facilitating safer operating environments.</p>
+                </div>
+            </div>
+            <div class="Product">
+                <a href="drilling-fluid-additives.html"><img src="images/5.jpg" alt="Drilling Fluid Additives" /></a>
+                <div class="ProductInfo">
+                    <h5 class="APS"><a href="drilling-fluid-additives.html" style="color: #333;">Drilling Fluid Additives</a></h5>
+                    <p>Optima Chemicals manufactures a range of high quality cost effective materials which can be used in the formulation of oilfield drilling muds.</p>
+                </div>
+            </div>
+            <div class="Product">
+                <a href="stimulation-chemicals.html"><img src="images/s1.png" alt="Well Stimulation Chemicals" /></a>
+                <div class="ProductInfo">
+                    <h5 class="APS"><a href="stimulation-chemicals.html" style="color: #333;">Stimulation Chemicals</a></h5>
+                    <p>Optima Chemicals' stimulation chemicals are designed and proven to perform optimally and economical in wide variety of applications.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Boxes Section -->
+    <div id="BoxesSection">
+        <div class="Box">
+            <h3>Our Commitment to Quality</h3>
+            <p>At Optima Chemicals, quality is at the heart of everything we do. Our products are rigorously tested to meet the highest industry standards, ensuring optimum performance for your operations.</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Optima Chemicals. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

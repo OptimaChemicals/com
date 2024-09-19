@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optima Chemicals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #004953;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        header img {
+            width: 150px;
+        }
+
+        .menu {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .menu li:hover > .dropdown {
+            display: flex;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: black;
+            flex-direction: column;
+            top: 100%;
+            left: 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            z-index: 1000;
+        }
+
+        .dropdown a {
+            padding: 5px 10px;
+            white-space: nowrap;
+        }
+
+        .HeaderPic {
+            background-image: url('images/team1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .HeaderPic h1 {
+            font-size: 3em;
+        }
+
+        #AboutPicWrapper {
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+
+        #AboutPic {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        #ProductsSection {
+            padding: 40px;
+        }
+
+#ProductsWrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .Product {
+            width: 23%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .Product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .Product h5 {
+            margin-top: 10px;
+        }
+
+        /* About Section */
+#AboutPicWrapper {
+    padding: 40px;
+    background-color: #004953; /* Set background to white */
+}
+
+#AboutPic {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    color: white; /* Set text color to black */
+}
+
+footer {
+            background-color: #004040;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .card h2 {
+            margin: 10px 0;
+            font-size: 1.5em;
+        }
+
+        .card p {
+            margin: 5px 0;
+        }
+        /* General Styles for mobile */
+        @media only screen and (max-width: 768px) {
+
+            /* Adjust header */
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Adjust header logo */
+            header img {
+                width: 120px;
+                margin-bottom: 10px;
+            }
+
+            /* Adjust header navigation for mobile */
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu li {
+                margin-bottom: 10px;
+            }
+
+            /* Header Picture - ensure it scales well */
+            .HeaderPic {
+                height: 250px;
+            }
+
+            .HeaderPic h1 {
+                font-size: 2em;
+            }
+
+            /* About Section */
+            #AboutPicWrapper {
+                padding: 20px;
+            }
+
+            #AboutPic {
+                font-size: 14px;
+            }
+
+            /* Products Section */
+            #ProductsWrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .Product {
+                width: 100%; /* Make each product take up full width */
+                margin-bottom: 15px;
+            }
+
+            /* Boxes Section */
+            #BoxesSection {
+                padding: 20px;
+            }
+
+            .Box {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            /* Footer adjustments */
+            footer {
+                font-size: 14px;
+            }
+        }
+
+        /* Further refinement for very small screens (like small phones) */
+        @media only screen and (max-width: 480px) {
+
+            /* Reduce padding and font sizes */
+            body {
+                font-size: 14px;
+            }
+
+            header img {
+                width: 100px;
+            }
+
+            .HeaderPic h1 {
+                font-size: 1.5em;
+            }
+
+            #ProductsWrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .Product {
+                width: 100%; /* Make products take up full width on small screens */
+                padding: 10px;
+            }
+
+            .Box {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+        <!-- Header Section -->
+    <header>
+        <img src="images/log1.png" alt="Company Logo">
+        <div class="header-info">
+        <h1 style="font-weight: bold; color: white;">Optima Chemicals</h1>
+        <p style="font-style: italic; color: white;">chemicals that fuel industry success</p>
+    </div>
+    <p></p>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-company.html">Our Company</a></li>
+            <li>
+                <a href="#">Products <i class="fas fa-bars"></i></a>
+                <div class="dropdown">
+                    <a href="cementing-chemicals.html">Cementing Chemicals</a>
+                    <a href="production-chemicals.html">Production Chemicals</a>
+                    <a href="drilling-fluid-additives.html">Drilling Fluid Additives</a>
+                    <a href="stimulation-chemicals.html">Stimulation Chemicals</a>
+                </div>
+            </li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <div class="HeaderPic">
+        <h1></h1>
+    </div>
+<div class="SeparatorLine">&nbsp;</div>
+
+    <div id="AboutPicWrapper">
+        <div id="AboutPic">
+            <h2>Our Team</h2>
+            <p>Our team is composed of highly skilled and dedicated professionals who work tirelessly to ensure the success of our company. Each member brings their own unique expertise and passion to their roles, and together they make our company thrive.</p>
+            
+        </div>
+    </div>
+
+    <div id="ProductsSection">
+        <div class="container">
+            <div class="card">
+                <img src="images/jm.jpg" alt="Jane Doe">
+                <h2>Jerome May</h2>
+                <p><strong>CEO</strong></p>
+                <p>Jerome May has been leading our company with visionary leadership and exceptional strategic insight. His commitment to excellence and innovation drives our company forward.</p>
+            </div>
+            <div class="card">
+                <img src="images/A.jpg" alt="John Smith">
+                <h2>Mary Bethel</h2>
+                <p><strong>Chemical Engineer</strong></p>
+                <p>Mary Bethel excels in crafting compelling marketing strategies that elevate our brand's presence. Her creativity and market knowledge have been instrumental in our growth.</p>
+            </div>
+            <div class="card">
+                <img src="images/JT.jpg" alt="Jerry Thompson">
+                <h2>Jerry Thompson</h2>
+                <p><strong>Process Technician</strong></p>
+                <p>Jerry Thompson is a highly skilled Process Technician with a Master’s degree in Chemical Engineering from Texas Tech University.
+                With over 10 years of experience in the chemical manufacturing industry, he specializes in optimizing production processes and ensuring operational efficiency.</p>
+            </div>
+            <div class="card">
+                <img src="images/C.jpg" alt="Michael Brown">
+                <h2>Michael Brown</h2>
+                <p><strong>Quality Assurance Analyst</strong></p>
+                <p>Michael Brown is dedicated to fostering a positive work environment and managing our talented workforce. His expertise in HR practices is vital for our company's culture.</p>
+            </div>
+            <div class="card">
+                <img src="images/D.jpg" alt="Emily Davis">
+                <h2>Emily Davis</h2>
+                <p><strong>Production Manager</strong></p>
+                <p>Emily Davis is a key player in developing innovative software solutions that meet our clients' needs. Her technical skills and problem-solving abilities are crucial to our success.</p>
+            </div>
+            <div class="card">
+                <img src="images/E.jpg" alt="Chris Wilson">
+                <h2>Chris Wilson</h2>
+                <p><strong>Research Scientist</strong></p>
+                <p>Chris Wilson leads our sales team with enthusiasm and expertise. His strategic approach to sales drives our revenue and establishes lasting client relationships.</p>
+            </div>
+        </div>
+    </div>
+     <!-- Footer -->
+    <footer>
+        &copy; 2024 Optima Chemicals. All Rights Reserved.
+    </footer>
+</body>
+</html>

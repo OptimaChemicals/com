@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Company</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        header {
+    background-color: #004953;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+header img {
+    width: 150px;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-right: 20px;
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu li:hover > .dropdown {
+    display: flex;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: black;
+    flex-direction: column;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+.dropdown a {
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+.HeaderPic {
+    background-image: url('images/research.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.HeaderPic h1 {
+    font-size: 3em;
+}
+
+footer {
+    background-color: #004040;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+        /* General styling for the navigation menu */
+        .MainMenu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            background-color: #333;
+        }
+
+        .MainMenu li {
+            margin-right: 15px;
+        }
+
+        .MainMenu li a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            border-radius: 4px;
+        }
+
+        .MainMenu li a:hover {
+            background-color: #555;
+        }
+
+        /* Specific styling for the "Our Company" link */
+        .MainMenu li a[href="our-company.html"] {
+            color: #FFD700; /* Gold text color */
+            background-color: #444;
+        }
+
+        .MainMenu li a[href="our-company.html"]:hover {
+            background-color: #FFD700;
+            color: black;
+        }
+
+        /* Styling for the page content */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: ghostwhite;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .our-values {
+            margin-top: 40px;
+        }
+
+        .our-values h2 {
+            font-size: 2em;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        .our-values ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .our-values li {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .card-holder {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 30%;
+        }
+
+        .card h2 {
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .card p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        footer {
+            background-color: #004040;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        /* General Styles for mobile */
+        @media only screen and (max-width: 768px) {
+
+            /* Adjust header */
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Adjust header logo */
+            header img {
+                width: 120px;
+                margin-bottom: 10px;
+            }
+
+            /* Adjust header navigation for mobile */
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu li {
+                margin-bottom: 10px;
+            }
+
+            /* Header Picture - ensure it scales well */
+            .HeaderPic {
+                height: 250px;
+            }
+
+            .HeaderPic h1 {
+                font-size: 2em;
+            }
+
+            /* About Section */
+            #AboutPicWrapper {
+                padding: 20px;
+            }
+
+            #AboutPic {
+                font-size: 14px;
+            }
+
+            /* Products Section */
+            #ProductsWrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .Product {
+                width: 100%; /* Make each product take up full width */
+                margin-bottom: 15px;
+            }
+
+            /* Boxes Section */
+            #BoxesSection {
+                padding: 20px;
+            }
+
+            .Box {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            /* Footer adjustments */
+            footer {
+                font-size: 14px;
+            }
+        }
+
+        /* Further refinement for very small screens (like small phones) */
+        @media only screen and (max-width: 480px) {
+
+            /* Reduce padding and font sizes */
+            body {
+                font-size: 14px;
+            }
+
+            header img {
+                width: 100px;
+            }
+
+            .HeaderPic h1 {
+                font-size: 1.5em;
+            }
+
+            #ProductsWrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .Product {
+                width: 100%; /* Make products take up full width on small screens */
+                padding: 10px;
+            }
+
+            .Box {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <img src="images/log1.png" alt="Company Logo">
+        <div class="header-info">
+        <h1 style="font-weight: bold; color: white;">Optima Chemicals</h1>
+        <p style="font-style: italic; color: white;">chemicals that fuel industry success</p>
+    </div>
+    <p></p>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Our Company</a></li>
+            <li>
+                <a href="#">Products <i class="fas fa-bars"></i></a>
+                <div class="dropdown">
+                    <a href="cementing-chemicals.html">Cementing Chemicals</a>
+                    <a href="production-chemicals.html">Production Chemicals</a>
+                    <a href="drilling-fluid-additives.html">Drilling Fluid Additives</a>
+                    <a href="stimulation-chemicals.html">Stimulation Chemicals</a>
+                </div>
+            </li>
+            <li><a href="our-team.html">Our Team</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Header Pic -->
+    <div class="HeaderPic">
+        <h1 class="APS"><span class="Large"></span><br /></h1>
+    </div>
+    <div class="SeparatorLine">&nbsp;</div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <h1>About Our Company</h1>
+        <p>
+           At Optima Chemicals, we are dedicated to providing high-quality chemical solutions tailored for the oil and gas industry. With a focus on innovation and excellence, we manufacture a comprehensive range of chemicals essential for various operations, including drilling, stimulation, and production.
+
+        Our team of experts leverages decades of industry experience and cutting-edge technology to develop products that enhance performance, ensure safety, and optimize efficiency. We pride ourselves on delivering solutions that not only meet but exceed industry standards, offering both standard and custom-formulated chemicals to address specific operational needs.
+
+        Committed to sustainability and operational excellence, we continuously refine our processes to minimize environmental impact while maximizing the effectiveness of our products. At Optima Chemicals, we partner with our clients to drive success and achieve exceptional results in the ever-evolving oil and gas sector.
+        </p>
+        <p>
+            Our mission is to deliver outstanding results in every project we undertake, ensuring that our clients receive the best possible solutions for their needs.
+        </p>
+
+        <div class="our-values">
+            <h2>Our Core Values</h2>
+            <ul>
+                <li>Integrity: We are committed to maintaining the highest ethical standards in all our dealings.</li>
+                <li>Excellence: We strive for excellence in everything we do, from service delivery to client relations.</li>
+                <li>Innovation: We embrace new ideas and technologies to stay ahead of the curve.</li>
+                <li>Collaboration: We believe in working together to achieve the best outcomes for our clients and partners.</li>
+            </ul>
+        </div>
+
+        
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Optima Chemicals. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
