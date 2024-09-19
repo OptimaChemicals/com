@@ -80,7 +80,6 @@
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 100px;
         }
 
         .contact-info {
@@ -137,7 +136,6 @@
             color: white;
             padding: 20px;
             text-align: center;
-            position: relative;
         }
 
         .social-media {
@@ -148,6 +146,61 @@
             margin: 0 10px;
             color: white;
             font-size: 1.5em;
+        }
+
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .menu {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .container {
+                width: 95%;
+            }
+
+            .social-media a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            footer {
+                position: static;
+                padding-bottom: 40px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header img {
+                height: 50px;
+            }
+
+            .menu a {
+                font-size: 14px;
+            }
+
+            .container {
+                width: 100%;
+            }
+
+            input, textarea {
+                font-size: 0.9em;
+            }
+
+            footer {
+                padding: 15px;
+                font-size: 0.9em;
+            }
+
+            .social-media i {
+                font-size: 1.2em;
+            }
         }
 
     </style>
@@ -180,9 +233,10 @@
     <div class="container">
         <div class="contact-info">
             <h2>Contact Optima Chemicals</h2>
-            <p><strong>Address:</strong> Box No. 82674,Dubai, 82674, Emirates</p>
-            <p><strong>Telephone:</strong> +1 720 310 5601 / +1 720 400 1055</p>
-            <p><strong>Email:</strong> optimachemicalsltd@gmail.com</p>
+            <p><strong>Address:</strong> Abu Dhabi, UAE</p>
+            <p><strong>Telephone:</strong> +971 2 555 5555</p>
+            <p><strong>Email:</strong> info@optimachemicals.com</p>
+            <p><strong>Follow us:</strong></p>
             <div class="social-media">
                 <a href="https://www.facebook.com/optimachemicals" target="_blank"><i class="fab fa-facebook"></i></a>
                 <a href="https://www.instagram.com/optimachemicals" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -190,7 +244,7 @@
             </div>
         </div>
 
-        <form action="https://formspree.io/f/xkgwlovj" method="post">
+        <form action="https://formspree.io/f/mwpeyqen" method="post">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
 
